@@ -1,8 +1,7 @@
 import React from 'react';
 import '../styles/CartItem.scss';
-import IconClose from '../components/IconClose';
 
-const CartItem = () => {
+const CartItem = ({ children }) => {
     return (        
         <div className="shopping-cart">
             <figure>
@@ -10,7 +9,7 @@ const CartItem = () => {
             </figure>
             <p>Bike</p>
             <p>$30,00</p>
-            <IconClose/>
+            { children }
         </div>    
     );
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-// import '../styles/IconClose.scss';
 
 const IconClose = () => {
     return (
