@@ -28,3 +28,9 @@
     font-size: var(--sm);
     color: var(--hospital-green) !important;
 }
+
+@media (min-width: 640px) {
+    .mobile-menu {
+        display: none;
+    }
+}

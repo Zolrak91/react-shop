@@ -1,15 +1,15 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Layout from '../containers/Layout';
-import NewPassword from '../containers/NewPassword';
-import RecoveryPassword from '../containers/RecoveryPassword';
-import Home from '../pages/Home';
-import NotFound from '../pages/NotFound';
-import Login from '../containers/Login';
-import EditAccount from '../containers/EditAccount';
-import Account from '../containers/Account';
-import MyOrder from '../pages/MyOrder';
-import '../styles/global.css';
+import Layout from '@containers/Layout';
+import NewPassword from '@containers/NewPassword';
+import RecoveryPassword from '@containers/RecoveryPassword';
+import Home from '@pages/Home';
+import NotFound from '@pages/NotFound';
+import Login from '@pages/Login';
+import EditAccount from '@containers/EditAccount';
+import Account from '@containers/Account';
+import MyOrder from '@pages/MyOrder';
+import '@styles/global.css';
 
 const App = () => {
     return (

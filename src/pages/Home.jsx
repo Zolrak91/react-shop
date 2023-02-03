@@ -3,16 +3,16 @@ import Layout from '../containers/Layout';
 import Header from '../components/Header';
 import ProductList from '../containers/ProductList';
 import Sidebar from '../components/Sidebar';
-import LayoutGrid from '../containers/LayoutGrid';
+import LayoutHome from '../containers/LayoutHome';
 
 const Home = () => {
     return (
         <Layout>
             <Header/>
-            <LayoutGrid>
+            <LayoutHome>
                 <Sidebar/>
                 <ProductList/>
-            </LayoutGrid>         
+            </LayoutHome>         
         </Layout>
     );
 }

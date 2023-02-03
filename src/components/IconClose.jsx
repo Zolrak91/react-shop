@@ -1,8 +1,9 @@
 import React from 'react';
+import iconArrowClose from '@icons/icon_close.png';
 
 const IconClose = () => {
     return (
-        <img src="./icons/icon_close.png" alt="close"/>
+        <img src={iconArrowClose} alt="close"/>
     );
 }
 

@@ -1,8 +1,9 @@
 import React from 'react';
+import flechita from '@icons/flechita.svg';
 
 const IconArrow = () => {
     return (
-        <img src="./icons/flechita.svg" alt="arrow"/>
+        <img src={flechita} alt="arrow"/>
     );
 }
 
