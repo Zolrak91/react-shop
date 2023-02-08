@@ -23,8 +23,8 @@ const Cart = () => {
                 <p className="title">My order</p>
             </div>    
             <div className="my-order-content">
-                {state.cart.map(item => (
-                    <CartItem product={item} key={`cartItem-${item.id}`} />
+                {state.cart.map((item, index) => (
+                    <CartItem product={item} key={index} indexValue={index} />
                 ))}
                 <div className="order">
                     <p>
