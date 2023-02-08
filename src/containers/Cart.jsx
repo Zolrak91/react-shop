@@ -1,30 +1,43 @@
-import React from 'react';
-import '../styles/Cart.scss';
-import CartItem from '../components/CartItem';
+import React, { useContext } from 'react';
+import AppContext from '@context/AppContext';
+import CartItem from '@components/CartItem';
+import IconArrow from '@components/IconArrow';
+import '@styles/Cart.scss';
 
 const Cart = () => {
+    const { state } = useContext(AppContext);
+
+    const sumTotal = () => {
+        let sum = 0;
+
+        state.cart.forEach(item => {
+            sum += item.price;
+        });
+        return sum;
+    };
+
     return (        
-        <aside class="product-detail">
-            <div class="title-container">
-                <img src="./icons/flechita.svg" alt="arrow"/>
-                <p class="title">My order</p>
+        <aside className="product-detail">
+            <div className="title-container">
+                <IconArrow/>
+                <p className="title">My order</p>
             </div>    
-            <div class="my-order-content">
-                <CartItem/>
-                <CartItem/>
-                <CartItem/>                
-                <div class="order">
+            <div className="my-order-content">
+                {state.cart.map(item => (
+                    <CartItem product={item} key={`cartItem-${item.id}`} />
+                ))}
+                <div className="order">
                     <p>
-                    <span>Total</span>
+                        <span>Total</span>
                     </p>
-                    <p>$560.00</p>
+                    <p>${sumTotal()}</p>
                 </div>    
-                <button class="primary-button">
+                <button className="primary-button">
                     Checkout
                 </button>
             </div>
         </aside>        
     );
-}
+};
 
 export default Cart;

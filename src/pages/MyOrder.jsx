@@ -1,8 +1,7 @@
 import React from 'react';
-import '../styles/MyOrder.scss';
-import Order from '../components/Order';
-import CartItem from '../components/CartItem';
-import IconClose from '../components/IconClose';
+import '@styles/MyOrder.scss';
+import Order from '@components/Order';
+import CartItem from '@components/CartItem';
 
 const MyOrder = () => {
     return (
@@ -11,18 +10,10 @@ const MyOrder = () => {
                 <h1 className="title">My order</h1>
                 <div className="my-order-content">
                     <Order/>                
-                    <CartItem>
-                        <IconClose/>
-                    </CartItem>                  
-                    <CartItem>
-                        <IconClose/>
-                    </CartItem>                  
-                    <CartItem>
-                        <IconClose/>
-                    </CartItem>                  
-                    <CartItem>
-                        <IconClose/>
-                    </CartItem>                  
+                    <CartItem/>                  
+                    <CartItem/>                  
+                    <CartItem/>                  
+                    <CartItem/>                  
                 </div>
             </div>
         </div>
